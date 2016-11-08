@@ -17,7 +17,7 @@ describe("Basics", function() {
 	});
 
 	it('testing for does-not-match is often useful, too', function() {
-		expect('abcd').not.toMatch(/^abcd$/);
+		expect('abcd').not.toMatch(/^abca$/);
 	});
 
 });
