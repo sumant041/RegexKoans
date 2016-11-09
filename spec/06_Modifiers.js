@@ -16,7 +16,7 @@ describe("Modifiers", function() {
     // to the language API to see how to make a case-insensitive match
     // in your language.
 
-    var fixThisPattern = /^[A-a][B-b][C-c]$/;
+    var fixThisPattern = /^abc$/i;
 
     expect( 'abc' ).toMatch(fixThisPattern);
     expect( 'ABC' ).toMatch(fixThisPattern);
@@ -57,7 +57,7 @@ describe("Modifiers", function() {
 
     expect( 'abc\nabc' ).toMatch(fixThisPattern);
 
-    expect( matches.length ).toEqual(2);
+    expect( matches.length ).toEqual(1);
     expect( matches[0]     ).toEqual("abc");
     expect( matches[1]     ).toEqual("undefined");
 

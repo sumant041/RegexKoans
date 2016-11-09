@@ -14,7 +14,7 @@ describe("Character Set Shortcuts", function() {
   });
 
   it('dot (.) matches anything... except line-feed', function() {
-    var fixThisPattern = /^d.g$/;
+    var fixThisPattern = /^d\sg$/;
 
     expect( 'd\ng' ).toMatch(fixThisPattern);
   });

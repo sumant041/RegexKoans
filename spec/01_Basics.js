@@ -9,7 +9,7 @@ describe("Basics", function() {
 	});
 
 	it('RegEx is case sensitive', function() {
-		expect('AbCd').toMatch(/^Abcd$/);
+		expect('AbCd').toMatch(/^AbCd$/);
 	});
 
 	it('whitespace matters', function() {

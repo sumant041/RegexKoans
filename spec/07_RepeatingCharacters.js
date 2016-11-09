@@ -27,7 +27,7 @@ describe("Repeating Characters", function() {
   });
 
   it('use * to match Zero Or More of a character', function() {
-    var fixThisPattern = /^x\s*$/;
+    var fixThisPattern = /^x\s*y$/;
 
     expect( 'x y'     ).toMatch(fixThisPattern);
     expect( 'x     y' ).toMatch(fixThisPattern);
@@ -53,7 +53,7 @@ describe("Repeating Characters", function() {
 
     var thisPatternWorks = /^xy{2,5}z$/;
 
-    var fixThisPattern = /^3.\d{1,5}$/;
+    var fixThisPattern = /^3.\d{1,3}$/;
 
     expect( 'xyyyz'   ).toMatch(thisPatternWorks);
     expect( 'xyyz'    ).toMatch(thisPatternWorks);
@@ -68,7 +68,7 @@ describe("Repeating Characters", function() {
   });
 
   it('use {n,} for "at least n" and {,m} for "not more than m" repeated characters', function() {
-    var fixThisPattern = /^a\s{1,}b$/;
+    var fixThisPattern = /^a\s*{1,}b$/;
 
     expect( 'a  b' ).toMatch(fixThisPattern);
     expect( 'a                                 b' ).toMatch(fixThisPattern);
